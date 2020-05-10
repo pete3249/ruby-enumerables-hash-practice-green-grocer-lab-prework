@@ -33,13 +33,13 @@ def apply_coupons(cart, coupons) #define methods and arguments
 end
 
 def apply_clearance(cart)
-    cart.each do |item|
-        if item[1][:clearance]
-           clearance_price = item[1][:price] * 0.8
-           cart[item[0]][:price] = clearance_price.round(2)
-        end
-     end
-     puts cart
+  cart.each do |item|
+    if item[1][:clearance]
+      clearance_price = item[1][:price] * 0.8
+      cart[item[0]][:price] = clearance_price.round(2)
+    end
+  end
+  puts cart
 end
 
 def checkout(cart, coupons)
