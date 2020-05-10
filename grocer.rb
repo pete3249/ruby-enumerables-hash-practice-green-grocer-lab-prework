@@ -33,7 +33,8 @@ def apply_coupons(cart, coupons) #define methods and arguments
 end
 
 def apply_clearance(cart)
-  # code here
+  cart.each do |item|
+    if 
 end
 
 def checkout(cart, coupons)
