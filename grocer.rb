@@ -15,7 +15,7 @@ end #close method
   
 def apply_coupons(cart, coupons) #define methods and arguments
   coupons.each do |coupon| #iterating through each item in coupons array
-    if cart[coupon[:item]] #if item in cart matches coupon
+    if cart[coupon[:item]] && cart[coupon[:item]][:count] >= coupon[:num] #if item in cart matches coupon
       item_coupon_name = coupon[:item] + " W/COUPON" #assign new name
       if cart[item_coupon_name]
         cart[item_coupon_name][:count] += coupon[:num]
